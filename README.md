@@ -63,3 +63,17 @@ Output = Aruba, 103000
 SELECT COUNT(DISTINCT Name) FROM country;
 
 Output = 239
+
+10. "What are the top ten largest countries by area?"
+
+SELECT Name FROM city 
+WHERE CountryCode = 'JPN'
+ORDER BY Population DESC LIMIT 5;
+
+Output = 
+Tokyo
+Jokohama [Yokohama]
+Osaka
+Nagoya
+Sapporo
+
