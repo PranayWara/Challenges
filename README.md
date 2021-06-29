@@ -112,9 +112,9 @@ Output =
 
 17. "List every country where over 50% of its population can speak German."
 
-s
+SELECT CountryCode,Percentage FROM countrylanguage WHERE Percentage >= 50 and Language = 'German' ORDER BY Percentage DESC;
 
-Output = 
+Output = AUT, DEU, LIE, CHE
 
 18. "Which country has the worst life expectancy? Discard zero or null values."
 
