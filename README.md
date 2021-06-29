@@ -98,8 +98,42 @@ FROM countrylanguage;
 
 Output = 'All distinct languages outputted'
 
-15. List the names and GNP of the world's top 10 richest countries.
+15. "List the names and GNP of the world's top 10 richest countries."
 
 SELECT Name,GNP FROM country ORDER BY GNP DESC LIMIT 10;
 
 Output = United States, Japan, Germany, France, United Kingdom, Italy, China, Brazil, Canada, Spain
+
+16. "List the names of, and number of languages spoken by, the top ten most multilingual countries."
+
+S
+
+Output = 
+
+17. "List every country where over 50% of its population can speak German."
+
+s
+
+Output = 
+
+18. "Which country has the worst life expectancy? Discard zero or null values."
+
+SELECT Name,LifeExpectancy FROM country WHERE LifeExpectancy IS NOT NULL ORDER BY LifeExpectancy ASC LIMIT 10;
+
+Output = Zambia, Mozambique, Malawi,Zimbabwe, Angola, Rwanda, Botswana, Swaziland, Niger, Namibia
+
+19. List the top three most common government forms.
+
+
+S
+
+Output = 
+
+20. How many countries have gained independence since records began?
+
+s
+
+Output = 
+
+
+
