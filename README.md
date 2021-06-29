@@ -34,10 +34,14 @@ SELECT NAME FROM city WHERE NAME LIKE 'f%' ORDER BY NAME DESC LIMIT 25;
 
 7. "Using COUNT and JOIN ... ON, get the number of cities in China."
 
-s
+SELECT COUNT(Name) from city WHERE city.CountryCode = 'CHN';
 
 8."Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations"
 
 SELECT * FROM country WHERE Population = (
 SELECT Population FROM country ORDER BY Population IS NOT NULL ASC LIMIT 1
 );
+
+9. "Using aggregate functions, return the number of countries the database contains."
+
+
