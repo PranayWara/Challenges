@@ -98,4 +98,8 @@ FROM countrylanguage;
 
 Output = 'All distinct languages outputted'
 
-15. 
+15. List the names and GNP of the world's top 10 richest countries.
+
+SELECT Name,GNP FROM country ORDER BY GNP DESC LIMIT 10;
+
+Output = United States, Japan, Germany, France, United Kingdom, Italy, China, Brazil, Canada, Spain
