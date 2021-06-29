@@ -66,14 +66,15 @@ Output = 239
 
 10. "What are the top ten largest countries by area?"
 
+SELECT * FROM country 
+ORDER BY country.SurfaceArea DESC LIMIT 10;
+
+Output = Russian Federation, Antarctica, Canada, China, United States, Brazil, Australia, India, Argentina, Kazakstan
+
+11. "What are the top ten largest countries by area?"
+
 SELECT Name FROM city 
 WHERE CountryCode = 'JPN'
 ORDER BY Population DESC LIMIT 5;
 
-Output = 
-Tokyo
-Jokohama [Yokohama]
-Osaka
-Nagoya
-Sapporo
-
+Output = Tokyo, Jokohama [Yokohama], Osaka, Nagoya, Sapporo
