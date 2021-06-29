@@ -44,4 +44,4 @@ SELECT Population FROM country ORDER BY Population IS NOT NULL ASC LIMIT 1
 
 9. "Using aggregate functions, return the number of countries the database contains."
 
-
+SELECT COUNT(DISTINCT Name) FROM country;
