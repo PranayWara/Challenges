@@ -8,11 +8,13 @@ USE world;
 1. "Using COUNT, get the number of cities in the USA."
 
 SELECT COUNT(Name) from city WHERE city.CountryCode = 'USA';
+
 Output = 274
 
 2. "Find out the population and life expectancy for people in   Argentina."
 
 SELECT Population, LifeExpectancy FROM country WHERE Name = 'Argentina';
+
 Output = 
 Populatuion = 37032000
 Life Expectancy = 75.1
