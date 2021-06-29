@@ -122,7 +122,7 @@ SELECT Name,LifeExpectancy FROM country WHERE LifeExpectancy IS NOT NULL ORDER B
 
 Output = Zambia, Mozambique, Malawi,Zimbabwe, Angola, Rwanda, Botswana, Swaziland, Niger, Namibia
 
-19. List the top three most common government forms.
+19. "List the top three most common government forms."
 
 
 S
@@ -131,9 +131,9 @@ Output =
 
 20. How many countries have gained independence since records began?
 
-s
+SELECT COUNT(IndepYear) From country WHERE IndepYear IS NOT NULL;
 
-Output = 
+Output = 192
 
 
 
