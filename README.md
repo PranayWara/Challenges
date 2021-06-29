@@ -81,7 +81,11 @@ Output = Tokyo, Jokohama [Yokohama], Osaka, Nagoya, Sapporo
 
 12. "List the names and country codes of every country with Elizabeth II as its Head of State. You will need to fix the mistake first!"
 
-SELECT Name,Code FROM country WHERE HeadOfState = 'Elisabeth II';
+UPDATE country
+SET HeadOfState = 'Elizabeth II'
+WHERE HeadOfState = 'Elisabeth II';
+
+SELECT Name,Code FROM country WHERE HeadOfState = 'Elizabeth II';
 
 Output = 'All countries outputted'
 
