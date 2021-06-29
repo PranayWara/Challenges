@@ -110,9 +110,20 @@ Output = United States, Japan, Germany, France, United Kingdom, Italy, China, Br
 
 16. "List the names of, and number of languages spoken by, the top ten most multilingual countries."
 
-S
+SELECT CountryCode, COUNT(CountryCode) AS `value_occurrence` 
+FROM countrylanguage GROUP BY CountryCode ORDER BY `value_occurrence` DESC LIMIT 10;
 
 Output = 
+CHN	12
+IND	12
+CAN	12
+USA	12
+RUS	12
+TZA	11
+ZAF	11
+NGA	10
+IRN	10
+KEN	10
 
 17. "List every country where over 50% of its population can speak German."
 
