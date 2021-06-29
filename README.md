@@ -78,3 +78,10 @@ WHERE CountryCode = 'JPN'
 ORDER BY Population DESC LIMIT 5;
 
 Output = Tokyo, Jokohama [Yokohama], Osaka, Nagoya, Sapporo
+
+12. "List the names and country codes of every country with Elizabeth II as its Head of State. You will need to fix the mistake first!"
+
+SELECT Name,Code FROM country WHERE HeadOfState = 'Elisabeth II';
+
+Output = 'All countries outputted'
+
