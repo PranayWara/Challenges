@@ -128,10 +128,10 @@ Output = Zambia, Mozambique, Malawi,Zimbabwe, Angola, Rwanda, Botswana, Swazilan
 
 19. "List the top three most common government forms."
 
+SELECT GovernmentForm, COUNT(GovernmentForm) AS `value_occurrence` 
+FROM country GROUP BY GovernmentForm ORDER BY `value_occurrence` DESC LIMIT 3;
 
-S
-
-Output = 
+Output = Republic, Constitutional Monarchy, Federal Republic
 
 20. How many countries have gained independence since records began?
 
