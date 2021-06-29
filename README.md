@@ -50,7 +50,7 @@ SELECT COUNT(Name) from city WHERE city.CountryCode = 'CHN';
 
 Output = 363
 
-8."Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations"
+8. "Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations"
 
 SELECT * FROM country WHERE Population = (
 SELECT Population FROM country ORDER BY Population IS NOT NULL ASC LIMIT 1
@@ -91,3 +91,11 @@ SELECT Name,Population,SurfaceArea FROM country ORDER BY Population/SurfaceArea 
 
 Output = Aruba, Afghanistan, Angola, Anguilla, Albania, Andorra, Netherlands Antilles, United Arab Emirates ,Argentina ,Armenia
 
+14. "List every unique world language."
+
+SELECT DISTINCT Language
+FROM countrylanguage;
+
+Output = 'All distinct languages outputted'
+
+15. 
