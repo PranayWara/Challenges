@@ -250,10 +250,19 @@ SELECT title,special_features FROM film WHERE special_features = 'Deleted Scenes
 
 Output = 'All films printed'
 
-11. 
+11. "Using HAVING, reverse-alphabetically list the last names that are not repeated."
+
 
 S
 
 Output = 
 
-12. 
+12. "Using HAVING, list the last names that appear more than once, from highest to lowest frequency."
+
+S
+
+Output = 
+
+13. "Which actor has appeared in the most films?"
+
+S
