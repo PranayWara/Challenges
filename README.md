@@ -85,3 +85,9 @@ SELECT Name,Code FROM country WHERE HeadOfState = 'Elisabeth II';
 
 Output = 'All countries outputted'
 
+13. "List the top ten countries with the smallest population-to-area ratio. Discard any countries with a ratio of 0."
+
+SELECT Name,Population,SurfaceArea FROM country ORDER BY Population/SurfaceArea IS NOT NULL ASC LIMIT 10;
+
+Output = Aruba, Afghanistan, Angola, Anguilla, Albania, Andorra, Netherlands Antilles, United Arab Emirates ,Argentina ,Armenia
+
