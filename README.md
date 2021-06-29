@@ -215,9 +215,45 @@ SELECT title,rating FROM film WHERE rating = "R";
 
 Output = 'All films printed'
 
-7. Find every non-R-rated movie.
+7. "Find every non-R-rated movie."
 
 SELECT title,rating FROM film WHERE rating != "R";
 
 Output = 'All films printed'
 
+8. "Find the ten shortest movies."
+
+SELECT title,length FROM film ORDER BY length ASC LIMIT 10;
+
+Output:
+RIDGEMONT SUBMARINE
+IRON MOON
+ALIEN CENTER
+LABYRINTH LEAGUE
+KWAI HOMEWARD
+DOWNHILL ENOUGH
+HALLOWEEN NUTS
+HANOVER GALAXY
+DIVORCE SHINING
+HAWK CHILL
+
+9. "Find the movies with the longest runtime, without using LIMIT."
+
+
+SELECT title,length FROM film ORDER BY length DESC;
+
+Output = 'All films printed'
+
+10. Find all movies that have deleted scenes.
+
+SELECT title,special_features FROM film WHERE special_features = 'Deleted Scenes';
+
+Output = 'All films printed'
+
+11. 
+
+S
+
+Output = 
+
+12. 
