@@ -146,11 +146,59 @@ FROM country GROUP BY GovernmentForm ORDER BY `value_occurrence` DESC LIMIT 3;
 
 Output = Republic, Constitutional Monarchy, Federal Republic
 
-20. How many countries have gained independence since records began?
+20. "How many countries have gained independence since records began?"
 
 SELECT COUNT(IndepYear) From country WHERE IndepYear IS NOT NULL;
 
 Output = 192
 
 
+Sakila Challenges
+
+USE sakila;
+
+1. "List all actors."
+
+SELECT * FROM actor;
+
+Output = 'All Actors in list'
+
+2. "Find the surname of the actor with the forename 'John'."
+
+SELECT first_name,last_name FROM actor WHERE first_name = 'John';
+
+Output = JOHN SUVARI
+
+3. "Find all actors with surname 'Neeson'."
+
+SELECT first_name,last_name FROM actor WHERE last_name = 'Neeson';
+
+Output = CHRISTIAN NEESON, JAYNE NEESON
+
+4. "Find all actors with ID numbers divisible by 10."
+
+SELECT first_name,last_name,actor_id FROM actor 
+WHERE actor_id % 10 = 0;
+
+Output = 
+CHRISTIAN	GABLE
+LUCILLE	TRACY
+SANDRA	PECK
+JOHNNY	CAGE
+NATALIE	HOPKINS
+HENRY	BERRY
+MICHELLE	MCCONAUGHEY
+RALPH	CRUZ
+SEAN	GUINESS
+SPENCER	DEPP
+SUSAN	DAVIS
+PENELOPE	MONROE
+GRETA	KEITEL
+WHOOPI	HURT
+JAYNE	NOLTE
+CHRIS	DEPP
+MENA	HOPPER
+JEFF	SILVERSTONE
+AUDREY	BAILEY
+THORA	TEMPLE
 
