@@ -202,3 +202,22 @@ JEFF	SILVERSTONE
 AUDREY	BAILEY
 THORA	TEMPLE
 
+5. "What is the description of the movie with an ID of 100?"
+
+SELECT film_id,title FROM film WHERE film_id = '100';
+
+Output = BROOKLYN DESERT
+A Beautiful Drama of a Dentist And a Composer who must Battle a Sumo Wrestler in The First Manned Space Station
+
+6. "Find every R-rated movie."
+
+SELECT title,rating FROM film WHERE rating = "R";
+
+Output = 'All films printed'
+
+7. Find every non-R-rated movie.
+
+SELECT title,rating FROM film WHERE rating != "R";
+
+Output = 'All films printed'
+
