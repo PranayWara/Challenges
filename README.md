@@ -345,3 +345,8 @@ SELECT first_name,last_name FROM actor WHERE last_name LIKE '%-son%' ORDER BY fi
 Output = No actors with -son in there last name
 
 25. Which category contains the most films?
+
+SELECT category.Name, COUNT(title) FROM film JOIN film_category USING (film_id)  JOIN category USING (category_id)
+GROUP BY category.name ORDER BY COUNT(title) DESC LIMIT 1;
+
+Output = Sports	74
