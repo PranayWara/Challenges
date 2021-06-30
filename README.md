@@ -43,7 +43,7 @@ Output = 'All countries outputted'
 6. "Using a single query, list 25 cities around the world that start with the letter F."
 
 SELECT NAME FROM city WHERE NAME LIKE 'f%' ORDER BY NAME DESC LIMIT 25;
-
+ 
 Output = 'All countries outputted'
 
 7. "Using COUNT and JOIN ... ON, get the number of cities in China."
@@ -54,11 +54,9 @@ Output = 363
 
 8. "Using IS NOT NULL, ORDER BY, and LIMIT, which country has the lowest population? Discard non-zero populations"
 
-SELECT * FROM country WHERE Population = (
-SELECT Population FROM country ORDER BY Population IS NOT NULL ASC LIMIT 1
-);
+SELECT Name,Population FROM country WHERE Population IS NOT NULL AND Population > 0 ORDER BY Population ASC LIMIT 1;
 
-Output = Aruba, 103000
+Output = Pitcairn, 50
 
 9. "Using aggregate functions, return the number of countries the database contains."
 
@@ -289,4 +287,18 @@ SELECT category.Name, AVG(length) FROM film JOIN film_category USING (film_id)  
 GROUP BY category.name ORDER BY AVG(length) DESC;
 
 Output = 'All average length of each category'
+
+17. "List all movies featuring a robot."
+
+SELECT title,description FROM film WHERE description LIKE '%robot%';
+
+Output = All movies that have Robot is description
+
+18. "How many movies were released in 2010?"
+
+SELECT title,release_year FROM film WHERE release_year = '2010';
+
+Output = None
+
+19. 
 
