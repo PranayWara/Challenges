@@ -300,5 +300,22 @@ SELECT title,release_year FROM film WHERE release_year = '2010';
 
 Output = None
 
-19. 
+19. "Find the titles of all the horror movies."
 
+SELECT category.Name, title FROM film JOIN film_category USING (film_id)  JOIN category USING (category_id)
+WHERE category.name = 'Horror';
+
+Output = All horror movies listed
+
+20. "List the full name of the staff member with the ID of 2."
+
+SELECT first_name,last_name,staff_id FROM staff WHERE staff_id = 2;
+
+Output = Jon	Stephens	2
+
+21. "List all the movies that Fred Costner has appeared in."
+
+SELECT actor.first_name, actor.last_name, film_id FROM film_actor JOIN actor USING (actor_id) JOIN film USING (film_id)
+WHERE actor.first_name = 'Fred' and actor.last_name = 'Costner';
+
+Output = All movies with Fred Costner are printed
