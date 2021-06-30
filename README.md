@@ -279,4 +279,14 @@ Output = 2005-08-29 22:50:12
 
 15. "What is the average runtime of all films?"
 
+SELECT AVG(length) FROM film;
+
+Output = 115.272
+
+16. "List the average runtime for every film category."
+
+SELECT category.Name, AVG(length) FROM film JOIN film_category USING (film_id)  JOIN category USING (category_id)
+GROUP BY category.name ORDER BY AVG(length) DESC;
+
+Output = 'All average length of each category'
 
