@@ -251,15 +251,16 @@ Output = 'All films printed'
 11. "Using HAVING, reverse-alphabetically list the last names that are not repeated."
 
 
-S
+SELECT last_name FROM actor GROUP BY last_name HAVING COUNT(last_name)=1 ORDER BY last_name DESC;
 
-Output = 
+Output = All last names in reverse alphabetical
 
 12. "Using HAVING, list the last names that appear more than once, from highest to lowest frequency."
 
-S
+SELECT last_name, count(last_name) FROM actor GROUP BY last_name 
+HAVING COUNT(last_name) >1 ORDER BY count(last_name) DESC;
 
-Output = 
+Output = All last names printed
 
 13. "Which actor has appeared in the most films?"
 
