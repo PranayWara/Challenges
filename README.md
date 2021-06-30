@@ -319,3 +319,29 @@ SELECT actor.first_name, actor.last_name, film_id FROM film_actor JOIN actor USI
 WHERE actor.first_name = 'Fred' and actor.last_name = 'Costner';
 
 Output = All movies with Fred Costner are printed
+
+22. "How many distinct countries are there?"
+
+SELECT DISTINCT(country) FROM country; 
+
+Output = All distinct countries printed.
+
+23. "List the name of every language in reverse-alphabetical order."
+
+SELECT name FROM language ORDER BY name DESC;
+
+Output = 
+Mandarin
+Japanese
+Italian
+German
+French
+English
+
+24. "List the full names of every actor whose surname ends with '-son' in alphabetical order by their forename."
+
+SELECT first_name,last_name FROM actor WHERE last_name LIKE '%-son%' ORDER BY first_name ASC;
+
+Output = No actors with -son in there last name
+
+25. Which category contains the most films?
