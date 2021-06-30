@@ -48,7 +48,7 @@ Output = 'All countries outputted'
 
 7. "Using COUNT and JOIN ... ON, get the number of cities in China."
 
-SELECT COUNT(Name) from city WHERE city.CountryCode = 'CHN';
+SELECT COUNT(city.Name) FROM city JOIN country ON city.CountryCode = country.code WHERE country.Code = 'CHN';
 
 Output = 363
 
@@ -265,4 +265,18 @@ Output =
 
 13. "Which actor has appeared in the most films?"
 
-S
+SELECT actor.actor_id, actor.first_name, actor.last_name, COUNT(actor_id) as film_count
+FROM actor JOIN film_actor USING (actor_id) GROUP BY actor_id ORDER BY film_count DESC LIMIT 1;
+
+Output = GINA	DEGENERES	42
+
+14. "When is 'Academy Dinosaur' due?"
+
+SELECT rental_date,rental_date + INTERVAL(SELECT rental_duration FROM film WHERE film_id = 1) 
+day AS due_date FROM rental WHERE rental_id = (SELECT rental_id FROM rental ORDER BY rental_id DESC LIMIT 1);
+
+Output = 2005-08-29 22:50:12
+
+15. "What is the average runtime of all films?"
+
+
